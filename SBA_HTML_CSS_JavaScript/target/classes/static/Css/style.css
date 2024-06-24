@@ -1,0 +1,163 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: cadetblue;
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: cadetblue;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+nav ul li ul.dropdown li {
+    margin: 0;
+}
+
+nav ul li ul.dropdown li a {
+    display: block;
+    padding: 0.5em 1em;
+}
+
+main {
+    padding: 2em;
+}
+
+footer{
+    background-color: lightblue;
+    color: blue;
+    text-align: center;
+    padding: 1em 0;
+    /*position: fixed;*/
+    width: 100%;
+    bottom: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 1em;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5em;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.logo-p{
+    display: flex;
+    flex-direction: column;
+}
+
+
+button {
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Define keyframes for the marquee animation */
+@keyframes marquee {
+    100% { transform: translateX(100%); }
+    /*100% { transform: translateX(100%); }*/
+}
+
+/* Apply the animation to the element */
+.marquee {
+    background-color: lightgreen;
+    color: darkblue;
+    text-align: center;
+    font-size: xx-large;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    animation: marquee 10s linear infinite; /* Adjust animation duration and timing */
+}
+
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #3498db transparent transparent transparent;
+}
+.slogan{
+    display: flex;
+    flex-direction: column;
+    /*margin-left: 20px;*/
+}
+
+#p-index{
+    color: darkslateblue;
+    font-weight: bold;
+    font-size: 21px;
+    border: blue;
+    background-color: mintcream;
+    text-align: justify;
+    font-family: "Baskerville Old Face";
+    font-style: italic;
+}
+h6{
+    color: green;
+    font-weight: bold;
+    font-style: italic;
+}

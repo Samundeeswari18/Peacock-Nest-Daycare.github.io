@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Peacock Nest Daycare</title>
+    <link rel="stylesheet" href="../static/Css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: 0;
+        }
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+            border-radius: 10px;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        /*.video-container{*/
+        /*    display: flex;*/
+        /*    flex-direction: row;*/
+        /*    margin-left: 10px;*/
+        /*}*/
+        .image-file{
+            display: flex;
+            flex-direction: row;
+            margin-right: 10px;
+        }
+        .image-dot{
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+        }
+        h3{
+           color: black;
+            text-align: center;
+        }
+        header {
+            background-color: cadetblue;
+            color: white;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1em;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li ul.dropdown {
+            display: none;
+            position: absolute;
+            background-color: cadetblue;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+        }
+
+        nav ul li:hover ul.dropdown {
+            display: block;
+        }
+
+        nav ul li ul.dropdown li {
+            margin: 0;
+        }
+
+        nav ul li ul.dropdown li a {
+            display: block;
+            padding: 0.5em 1em;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../client/index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <a href="#" >Services</a>
+                <ul class="dropdown">
+                    <li><a href="#">Full-time Care</a></li>
+                    <li><a href="#">Part-time Care</a></li>
+                    <li><a href="#">After-school Programs</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="../templates/welcome.html">Images/Videos</a> </li>
+        </ul>
+    </nav>
+</header>
+
+<h1>Welcome to Peacock Nest Daycare</h1>
+
+<div class="image-file">
+<div class="image-dot">
+<div class="slideshow-container">
+    <h3>Images</h3>
+
+
+    <div class="mySlides">
+        <img src="../Images/PNimage-1.jpg" alt="Daycare Image 1">
+    </div>
+    <div class="mySlides">
+        <img src="../Images/PNimage-2.jpg" alt="Daycare Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="../Images/PNimage-4.jpg" alt="Daycare Image 3">
+    </div>
+    <div class="mySlides">
+        <img src="../Images/daycare.jpg" alt="Daycare Image 4">
+    </div>
+    <div class="mySlides">
+        <img src="../Images/Daycare 2.jpg" alt="Daycare Image 5">
+    </div>
+    <div class="mySlides">
+        <img src="../Images/daycare 3.jpg" alt="Daycare Image 6">
+    </div>
+    <div class="mySlides">
+        <img src="../Images/PN_Banner.png" alt="Daycare Image 7">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br>
+
+<div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+</div>
+</div>
+
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+<div class="video-container">
+ <h3>Videos</h3>
+<video controls>
+    <source src="../video/PNvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<footer>
+    <p>&copy; 2024 Peacock Nest Daycare</p>
+</footer>
+</body>
+</html>
